@@ -15,7 +15,9 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2024.0.1</spring-cloud.version>
-                <start-class>com.unir.products.ProductsApplication</start-class>
+        <start-class>com.unir.products.ProductsApplication</start-class>
+		<!-- NUEVA propiedad para MySQL -->
+		<mysql.version>8.1.0</mysql.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -58,10 +60,12 @@
 			<version>2.8.1</version>
 		</dependency>
 		
+		<!-- DEPENDENCIA ACTUALIZADA DE MYSQL -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>${mysql.version}</version>
+			<scope>runtime</scope>
 		</dependency>
 		
 		<dependency>
@@ -110,5 +114,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
