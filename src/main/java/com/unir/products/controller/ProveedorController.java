@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @CrossOrigin(
     origins = {
-        "https://*-carloshhd208s-projects.vercel.app", // <- Comodín para todos los previews de Vercel
+        "https://*-carloshhd208s-projects.vercel.app", 
         "http://localhost:3000"
     },
     allowCredentials = "true"
