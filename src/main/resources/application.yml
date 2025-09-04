@@ -42,7 +42,7 @@ eureka:
     secure-port-enabled: false
     non-secure-port: ${server.port}
     secure-port: 443
-    hostname: ms-inventory-products
+    hostname: ${HOSTNAME:ms-inventory-products-backend}
 
 # Logging
 logging:
