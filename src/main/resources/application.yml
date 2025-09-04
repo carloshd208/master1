@@ -1,0 +1,49 @@
+## YAML Template.
+---
+# Configuración de Spring
+spring:
+  application:
+    name: ms-inventarios-operador
+
+  # Configuración de DataSource
+  datasource:
+    url: jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}
+    username: ${MYSQLUSER}
+    password: ${MYSQLPASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 5
+      auto-commit: false
+
+  # Configuración JPA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        connection.provider_disables_autocommit: true
+
+# Configuración de Instancia
+server:
+  port: ${PORT:8086}
+
+# Configuración del cliente de Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: false
+    non-secure-port-enabled: true
+    secure-port-enabled: false
+    non-secure-port: ${server.port}
+    secure-port: 443
+    hostname: ms-inventory-products
+
+# Logging
+logging:
+  level:
+    com.unir.products: DEBUG
