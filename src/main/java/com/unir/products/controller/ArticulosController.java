@@ -25,13 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-@CrossOrigin(
-    origins = {
-        "https://*-carloshhd208s-projects.vercel.app", // <- Comodín para todos los previews de Vercel
-        "http://localhost:3000"
-    },
-    allowCredentials = "true"
-)
+
 
 @Tag(name = "Products Controller", description = "Microservicio encargado de exponer operaciones CRUD sobre productos alojados en una base de datos en memoria.")
 public class ArticulosController 
