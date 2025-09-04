@@ -26,8 +26,8 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Slf4j
 @CrossOrigin(
-    origins = {
-        "https://*-carloshhd208s-projects.vercel.app", 
+    originPatterns = {
+        "https://*.vercel.app", 
         "http://localhost:3000"
     },
     allowCredentials = "true"
