@@ -17,14 +17,12 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin(
-    origins = {
-        "https://*-carloshhd208s-projects.vercel.app", 
+    originPatterns = {
+        "https://*.vercel.app", 
         "http://localhost:3000"
     },
     allowCredentials = "true"
 )
-
-
 public class ProveedorController 
 {
 		@Autowired // sin esta cosa no jala (es para inyeecion de codigo)
