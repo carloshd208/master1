@@ -16,7 +16,13 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(
+    origins = {
+        "https://proyecto-unir-fahyf3qgn-carloshhd208s-projects.vercel.app",
+        "http://localhost:3000"
+    },
+    allowCredentials = "true"
+)
 
 public class PedidoController 
 {
